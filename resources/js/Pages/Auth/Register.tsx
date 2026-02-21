@@ -103,16 +103,15 @@ export default function Register() {
                     />
                 </div>
 
-                <div className="mt-4 flex items-center justify-end">
-                    {/* Link back to login — green to match golf theme */}
+                <div className="flex items-center justify-end gap-3 ms-auto">
                     <Link
                         href={route('login')}
                         className="rounded-md text-sm text-green-700 underline hover:text-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                     >
-                        Already registered?
+                        Login
                     </Link>
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                    <PrimaryButton disabled={processing}>
                         Register
                     </PrimaryButton>
                 </div>

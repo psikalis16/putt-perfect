@@ -42,18 +42,18 @@
     --color-danger:  #ef4444;
     --color-warning: #f59e0b;
 
-    /* App background — deep fairway */
-    --bg-app:    var(--color-green-900);
-    --bg-card:   var(--color-green-800);
-    --bg-surface: var(--color-green-700);
+    /* App background — clean light theme to match login screen */
+    --bg-app:    var(--color-gray-100);
+    --bg-card:   var(--color-white);
+    --bg-surface: var(--color-gray-200);
 
     /* Text */
-    --text-primary:   var(--color-white);
-    --text-secondary: var(--color-green-200);
-    --text-muted:     var(--color-gray-400);
+    --text-primary:   var(--color-gray-900);
+    --text-secondary: var(--color-gray-600);
+    --text-muted:     var(--color-gray-500);
 
     /* Border */
-    --border-color: rgba(255,255,255,0.1);
+    --border-color: var(--color-gray-200);
 
     /* Spacing */
     --space-1:  4px;
@@ -73,10 +73,10 @@
     --radius-xl:   24px;
     --radius-full: 9999px;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
-    --shadow-lg: 0 8px 32px rgba(0,0,0,0.6);
+    /* Shadows — lighter for the bright theme */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.15);
 
     /* Bottom nav height so content never hides behind it */
     --nav-height: 72px;
@@ -134,9 +134,11 @@ button {
     justify-content: space-between;
     height: var(--header-height);
     padding: 0 var(--space-4);
-    background: rgba(10, 31, 14, 0.95);
+    /* White frosted glass header */
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--color-green-500);
+    color: var(--text-primary);
 }
 
 .app-header__logo {
@@ -169,9 +171,10 @@ button {
     align-items: center;
     justify-content: space-around;
     height: var(--nav-height);
-    background: rgba(10, 31, 14, 0.97);
+    /* White frosted glass nav */
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(16px);
-    border-top: 1px solid var(--border-color);
+    border-top: 2px solid var(--color-green-500);
     padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
@@ -182,7 +185,8 @@ button {
     gap: 3px;
     flex: 1;
     padding: var(--space-2) 0;
-    color: var(--text-muted);
+    /* Muted grey for inactive nav items */
+    color: var(--color-gray-400);
     transition: color 0.15s ease;
     font-size: 0.68rem;
     font-weight: 500;
@@ -191,7 +195,8 @@ button {
 }
 
 .nav-item--active {
-    color: var(--color-green-300);
+    /* Golf green for active nav item */
+    color: var(--color-green-600);
 }
 
 .nav-item__icon {
@@ -208,7 +213,8 @@ button {
 }
 
 .card--glass {
-    background: rgba(15, 46, 20, 0.6);
+    /* Light frosted glass for light theme */
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
 }
 
@@ -258,8 +264,8 @@ button {
 }
 
 .btn--ghost:hover {
-    border-color: var(--color-green-400);
-    color: var(--color-white);
+    border-color: var(--color-green-600);
+    color: var(--color-green-700);
 }
 
 .btn--danger {
@@ -355,6 +361,7 @@ button {
 .flex-col      { flex-direction: column; }
 .items-center  { align-items: center; }
 .justify-center { justify-content: center; }
+.justify-end    { justify-content: flex-end; }
 .justify-between { justify-content: space-between; }
 .gap-2         { gap: var(--space-2); }
 .gap-3         { gap: var(--space-3); }
@@ -425,7 +432,8 @@ button {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(61,158,77,0.08), transparent);
+    /* Subtle green tint shimmer on white cards */
+    background: linear-gradient(135deg, rgba(21,128,61,0.04), transparent);
     pointer-events: none;
 }
 
@@ -525,7 +533,8 @@ button {
     padding: var(--space-2) var(--space-4);
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--color-green-300);
+    /* Golf green text on light surface */
+    color: var(--color-green-700);
     margin: var(--space-3) auto;
 }
 
@@ -616,7 +625,8 @@ button {
 }
 
 .modal {
-    background: var(--color-green-800);
+    /* White card modal to match light theme */
+    background: var(--color-white);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
@@ -677,7 +687,8 @@ button {
 .stat-card__value {
     font-size: 1.6rem;
     font-weight: 800;
-    color: var(--color-green-300);
+    /* Darker green readable on white card */
+    color: var(--color-green-700);
 }
 
 .stat-card__label {
@@ -735,7 +746,8 @@ button {
 .session-item__score {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--color-green-300);
+    /* Darker green readable on white cards */
+    color: var(--color-green-700);
 }
 
 .session-item__range {
@@ -779,7 +791,8 @@ button {
 .slider-value {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--color-green-300);
+    /* Darker green readable on light background */
+    color: var(--color-green-700);
 }
 
 input[type="range"] {
