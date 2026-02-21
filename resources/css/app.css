@@ -1027,3 +1027,90 @@ input[type="password"]:focus {
         padding: var(--space-10) var(--space-6);
     }
 }
+
+/* ── Guest Layout (Auth Pages) ──────────────────────────────────────────────
+   Overrides the dark app theme for login / register / forgot-password pages.
+   Applied via the .guest-layout class on the root element in GuestLayout.tsx.
+   ───────────────────────────────────────────────────────────────────────── */
+.guest-layout {
+    /* Light grey page background — overrides dark body bg */
+    background-color: #f3f4f6 !important;
+    /* Reset body text color so labels read on white */
+    color: #111827;
+    min-height: 100vh;
+}
+
+/* White form card */
+.guest-layout .guest-card {
+    background-color: #ffffff;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels — dark charcoal, readable on white */
+.guest-layout label {
+    color: #1f2937;
+}
+
+/* Plain helper text */
+.guest-layout .guest-help-text {
+    color: #4b5563;
+}
+
+/* Text inputs — white background, grey border, green focus */
+.guest-layout input[type="text"],
+.guest-layout input[type="email"],
+.guest-layout input[type="password"] {
+    background-color: #ffffff !important;
+    border-color: #d1d5db !important;
+    color: #111827 !important;
+    border-radius: 6px;
+}
+
+.guest-layout input[type="text"]:focus,
+.guest-layout input[type="email"]:focus,
+.guest-layout input[type="password"]:focus {
+    border-color: #16a34a !important;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2) !important;
+    outline: none;
+}
+
+/* Checkbox — green accent */
+.guest-layout input[type="checkbox"] {
+    background-color: #ffffff !important;
+    border-color: #d1d5db !important;
+    accent-color: #15803d;
+}
+
+/* Span text inside guest layout (e.g. "Remember me") */
+.guest-layout span {
+    color: #374151;
+}
+
+/* Primary button — solid golf green; override global button reset */
+.guest-layout .guest-card button {
+    background-color: #15803d !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    cursor: pointer;
+}
+
+.guest-layout .guest-card button:hover {
+    background-color: #16a34a !important;
+}
+
+.guest-layout .guest-card button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Links inside guest layout */
+.guest-layout a {
+    color: #15803d;
+}
+
+.guest-layout a:hover {
+    color: #166534;
+}
+

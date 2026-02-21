@@ -104,9 +104,10 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4 flex items-center justify-end">
+                    {/* Link back to login — green to match golf theme */}
                     <Link
                         href={route('login')}
-                        className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="rounded-md text-sm text-green-700 underline hover:text-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                     >
                         Already registered?
                     </Link>
